@@ -1,24 +1,28 @@
 
 public class Card {
     private int value;
-    private int bonus;
     private String suit;
+    private int bonus;
 
-    public Card(int value, int bonus, String suit) {
+    public Card(int value,int bonus, String suit) {
         this.value = value;
-        this.bonus = bonus;
         this.suit = suit;
+        this.bonus = bonus;
     }
 
-    public int getValue() {
+    public int getCard() {
         return value;
+    }
+
+    public String getSuit() {
+        return suit;
     }
 
     public int getBonus() {
         return bonus;
     }
-
-    public String getSuit() {
-        return suit;
+    
+    public int totalCardValue() {
+	return value + bonus;
     }
 }
